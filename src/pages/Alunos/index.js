@@ -16,7 +16,6 @@ export default function Alunos(){
   const [nota, setNota] = useState('')
   async function handleRegister(e){
     e.preventDefault();
-
     if(aluno !== ''){
         await addDoc(collection(db, "alunos"), {
           aluno: aluno,
@@ -56,6 +55,8 @@ export default function Alunos(){
           <form className="form-profile" onSubmit={handleRegister}>
           
             <label>Aluno</label>
+            <p>Cadastre aqui, o nome de seu aluno em nossa database</p>
+            <br></br>
               <input
                 type="text"
                 placeholder="Aluno..."
